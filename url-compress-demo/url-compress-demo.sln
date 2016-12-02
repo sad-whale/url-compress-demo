@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{ED8E775D-317E-4854-88B9-A3E5E4D82F05}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{446B79B5-ED56-4D27-8057-24DDE76F2EE6}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "url-compress-demo", "src\url-compress-demo\url-compress-demo.xproj", "{2813E277-3E26-45B9-8206-675AC8CC604D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2813E277-3E26-45B9-8206-675AC8CC604D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2813E277-3E26-45B9-8206-675AC8CC604D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2813E277-3E26-45B9-8206-675AC8CC604D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2813E277-3E26-45B9-8206-675AC8CC604D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2813E277-3E26-45B9-8206-675AC8CC604D} = {ED8E775D-317E-4854-88B9-A3E5E4D82F05}
+	EndGlobalSection
+EndGlobal
