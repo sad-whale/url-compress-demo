@@ -1,5 +1,5 @@
---temp-output:C:\Users\sbari\Source\Repos\url-compress-demo\url-compress-demo\src\url-compress-demo\obj\Debug\netcoreapp1.0\
---out:C:\Users\sbari\Source\Repos\url-compress-demo\url-compress-demo\src\url-compress-demo\bin\Debug\netcoreapp1.0\url-compress-demo.dll
+--temp-output:C:\Users\sbari\Source\Repos\url-compress-demo\url-compress-demo\src\url-compress-demo\bin\src\url-compress-demo\obj\Debug\netcoreapp1.0\
+--out:C:\Users\sbari\Source\Repos\url-compress-demo\url-compress-demo\src\url-compress-demo\bin\src\url-compress-demo\bin\Debug\netcoreapp1.0\url-compress-demo.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -19,7 +19,6 @@
 --reference:C:\Users\sbari\.nuget\packages\Microsoft.AspNetCore.Cryptography.Internal\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.Cryptography.Internal.dll
 --reference:C:\Users\sbari\.nuget\packages\Microsoft.AspNetCore.DataProtection\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.DataProtection.dll
 --reference:C:\Users\sbari\.nuget\packages\Microsoft.AspNetCore.DataProtection.Abstractions\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.DataProtection.Abstractions.dll
---reference:C:\Users\sbari\.nuget\packages\Microsoft.AspNetCore.Diagnostics\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.Diagnostics.dll
 --reference:C:\Users\sbari\.nuget\packages\Microsoft.AspNetCore.Diagnostics.Abstractions\1.0.0\lib\netstandard1.0\Microsoft.AspNetCore.Diagnostics.Abstractions.dll
 --reference:C:\Users\sbari\.nuget\packages\Microsoft.AspNetCore.Hosting\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.Hosting.dll
 --reference:C:\Users\sbari\.nuget\packages\Microsoft.AspNetCore.Hosting.Abstractions\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.Hosting.Abstractions.dll
@@ -197,7 +196,7 @@
 --reference:C:\Users\sbari\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\sbari\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\sbari\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
---resource:"C:\Users\sbari\Source\Repos\url-compress-demo\url-compress-demo\src\url-compress-demo\obj\Debug\netcoreapp1.0\url-compress-demodotnet-compile.deps.json",url-compress-demo.deps.json
+--resource:"C:\Users\sbari\Source\Repos\url-compress-demo\url-compress-demo\src\url-compress-demo\bin\src\url-compress-demo\obj\Debug\netcoreapp1.0\url-compress-demodotnet-compile.deps.json",url-compress-demo.deps.json
 C:\Users\sbari\Source\Repos\url-compress-demo\url-compress-demo\src\url-compress-demo\Program.cs
 C:\Users\sbari\Source\Repos\url-compress-demo\url-compress-demo\src\url-compress-demo\Startup.cs
 C:\Users\sbari\Source\Repos\url-compress-demo\url-compress-demo\src\url-compress-demo\CommandHandlers\CompressorCommandHandler.cs
@@ -205,8 +204,7 @@ C:\Users\sbari\Source\Repos\url-compress-demo\url-compress-demo\src\url-compress
 C:\Users\sbari\Source\Repos\url-compress-demo\url-compress-demo\src\url-compress-demo\Commands\CompressUrlCommand.cs
 C:\Users\sbari\Source\Repos\url-compress-demo\url-compress-demo\src\url-compress-demo\Commands\IncrementClickCountCommand.cs
 C:\Users\sbari\Source\Repos\url-compress-demo\url-compress-demo\src\url-compress-demo\Controllers\UrlController.cs
-C:\Users\sbari\Source\Repos\url-compress-demo\url-compress-demo\src\url-compress-demo\ErrorHandling\ErrorDto.cs
-C:\Users\sbari\Source\Repos\url-compress-demo\url-compress-demo\src\url-compress-demo\ErrorHandling\InvalidUrlException.cs
+C:\Users\sbari\Source\Repos\url-compress-demo\url-compress-demo\src\url-compress-demo\Controllers\ValuesController.cs
 C:\Users\sbari\Source\Repos\url-compress-demo\url-compress-demo\src\url-compress-demo\Migrations\20161203200944_Initiate.cs
 C:\Users\sbari\Source\Repos\url-compress-demo\url-compress-demo\src\url-compress-demo\Migrations\20161203200944_Initiate.Designer.cs
 C:\Users\sbari\Source\Repos\url-compress-demo\url-compress-demo\src\url-compress-demo\Migrations\CompressorContextModelSnapshot.cs
@@ -214,5 +212,3 @@ C:\Users\sbari\Source\Repos\url-compress-demo\url-compress-demo\src\url-compress
 C:\Users\sbari\Source\Repos\url-compress-demo\url-compress-demo\src\url-compress-demo\Persistance\CompressorContext.cs
 C:\Users\sbari\Source\Repos\url-compress-demo\url-compress-demo\src\url-compress-demo\Queries\CompressorQueryFacade.cs
 C:\Users\sbari\Source\Repos\url-compress-demo\url-compress-demo\src\url-compress-demo\Queries\ICompressorQueryFacade.cs
-C:\Users\sbari\Source\Repos\url-compress-demo\url-compress-demo\src\url-compress-demo\Services\IUserService.cs
-C:\Users\sbari\Source\Repos\url-compress-demo\url-compress-demo\src\url-compress-demo\Services\UserService.cs

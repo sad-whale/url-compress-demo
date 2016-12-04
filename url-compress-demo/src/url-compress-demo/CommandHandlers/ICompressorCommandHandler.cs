@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using url_compress_demo.Commands;
+﻿using url_compress_demo.Commands;
 
 namespace url_compress_demo.CommandHandlers
 {
-    interface ICompressorCommandHandler
+    public interface ICompressorCommandHandler
     {
         void Handle(CompressUrlCommand command);
 
