@@ -2,6 +2,9 @@
 
 namespace url_compress_demo.Services
 {
+    /// <summary>
+    /// Служба, получающая id пользователя из текущего http контекста
+    /// </summary>
     public class UserService : IUserService
     {
         private IHttpContextAccessor _contextAccessor;

@@ -8,6 +8,9 @@ using url_compress_demo.Persistance;
 
 namespace url_compress_demo.CommandHandlers
 {
+    /// <summary>
+    /// никакой особо сложной лоикитут нет - все понятно из кода
+    /// </summary>
     public class CompressorCommandHandler : ICompressorCommandHandler
     {
         private CompressorContext _context;
@@ -17,6 +20,9 @@ namespace url_compress_demo.CommandHandlers
             _context = context;
         }
 
+        /// <summary>
+        /// инкрементирование счетчика
+        /// </summary>
         public void Handle(IncrementClickCountCommand command)
         {
             if (command == null)
@@ -30,12 +36,16 @@ namespace url_compress_demo.CommandHandlers
             }
         }
 
+        /// <summary>
+        /// запись в бд новой сжатой ссылки
+        /// </summary>
         public void Handle(CompressUrlCommand command)
         {
             CompressedUrl newUrl = new CompressedUrl()
             {
                 ClickCount = 0,
                 CreationDate = DateTime.Now,
+                //для простоты в качетве "короткого" id ссылки решил взять всё тот же гуид (для простоты)
                 Id = Guid.NewGuid().ToString("D"),
                 SourceUrl = command.SourceUrl,
                 UserId = command.UserId

@@ -35,6 +35,7 @@ namespace url_compress_demo
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //конфигурирование ioc
             services.AddDbContext<CompressorContext>(options => options.UseSqlServer(Configuration.GetConnectionString("azuredb")));
             // Add framework services.
             services.AddTransient<IUserService, UserService>();
@@ -51,8 +52,11 @@ namespace url_compress_demo
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
+            //обработка необрабоанных исключений
             app.UseExceptionHandler(errorApp =>
             {
+                //пишем в ответ код 500
+                //и информацию об исключении в формате json
                 errorApp.Run(async context =>
                 {
                     context.Response.StatusCode = 500; // or another Status accordingly to Exception Type
@@ -71,9 +75,11 @@ namespace url_compress_demo
                     }
                 });
             });
-
+            //"аутентификация" на основе cookie
             app.Use((context, next) =>
             {
+                //берем куку user_id и считаем её иднтификатором пользователя
+                //если такой куки нет, генерируем новуй гуид и запихиваем в эту куку в ответ
                 var cookies = context.Request.Cookies;
                 var userIdCookieName = "user_id";
 
@@ -97,6 +103,7 @@ namespace url_compress_demo
                 return next.Invoke();
             });
 
+            //подключение статических файлов и настройка страницы по умолчанию
             DefaultFilesOptions options = new DefaultFilesOptions();
             options.DefaultFileNames.Clear();
             options.DefaultFileNames.Add("app/index.html");

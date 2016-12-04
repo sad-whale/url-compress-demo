@@ -4,6 +4,10 @@ using url_compress_demo.Persistance;
 
 namespace url_compress_demo.Queries
 {
+    /// <summary>
+    /// ендпоинт для запросов к данным - моя попытка придерживаться принципов CQRS
+    /// получает dbcontext из ioc контейнера и предоставляет его данные для чтения как IQueryable
+    /// </summary>
     public class CompressorQueryFacade : ICompressorQueryFacade
     {
         private CompressorContext _context;
