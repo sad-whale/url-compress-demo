@@ -1,0 +1,21 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="input-group">
+                <input ng-model="$ctrl.url" type="text" class="form-control">
+                <span class="input-group-btn">
+                    <button ng-click="$ctrl.compress()" class="btn btn-default" type="button">Compress</button>
+                </span>
+            </div>
+            <div ng-hide="!$ctrl.compressed">
+                Compressed url:
+                <a href="{{'go/' + $ctrl.compressed.Id}}">{{$ctrl.compressed.Id}}</a>
+            </div>
+            <div ng-hide="!$ctrl.error">
+                Error occured:
+                {{$ctrl.error.Message}}
+            </div>
+            <a href="#!/urls">Browse all created urls.</a>
+        </div>     
+    </div>
+</div>

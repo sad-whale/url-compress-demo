@@ -1,0 +1,13 @@
+﻿body {
+    padding: 20px;
+}
+
+td {
+    word-break: break-all;
+    width: 25%;
+}
+
+th {
+    word-break: break-all;
+    width: 25%;
+}

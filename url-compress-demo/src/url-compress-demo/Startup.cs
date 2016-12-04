@@ -97,6 +97,14 @@ namespace url_compress_demo
                 return next.Invoke();
             });
 
+            DefaultFilesOptions options = new DefaultFilesOptions();
+            options.DefaultFileNames.Clear();
+            options.DefaultFileNames.Add("app/index.html");
+
+            app.UseDefaultFiles(options);
+
+            app.UseStaticFiles();
+
             app.UseMvc();
         }
     }

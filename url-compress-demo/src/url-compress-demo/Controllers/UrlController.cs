@@ -59,26 +59,36 @@ namespace url_compress_demo.Controllers.QueryControllers
         }
 
         [HttpPost("urlapi/compress")]
-        public void CompressUrl(string url)
+        public string CompressUrl(string url)
         {
-            string userId = _userService.GetCurrentUserId();
-
-            url = WebUtility.UrlDecode(url);
-
-            Uri uriResult;
-            bool result = Uri.TryCreate(url, UriKind.Absolute, out uriResult)
-                && (uriResult.Scheme == "http" || uriResult.Scheme == "https");
-
-            if (!result)
-                throw new InvalidUrlException($"Invalid url: {url}");
-
-            CompressUrlCommand command = new CompressUrlCommand()
+            try
             {
-                SourceUrl = uriResult.ToString(),
-                UserId = userId
-            };
+                string userId = _userService.GetCurrentUserId();
 
-            _compressorCommandHandler.Handle(command);
+                url = WebUtility.UrlDecode(url);
+
+                Uri uriResult;
+                bool result = Uri.TryCreate(url, UriKind.Absolute, out uriResult)
+                    && (uriResult.Scheme == "http" || uriResult.Scheme == "https");
+
+                if (!result)
+                    throw new InvalidUrlException($"Invalid url: {url}");
+
+                CompressUrlCommand command = new CompressUrlCommand()
+                {
+                    SourceUrl = uriResult.ToString(),
+                    UserId = userId
+                };
+                _compressorCommandHandler.Handle(command);
+
+                var query = _compressorQuery.Urls.Where(u => u.UserId == userId).OrderByDescending(u => u.CreationDate).FirstOrDefault();
+                return JsonConvert.SerializeObject(query);
+            }
+            catch(InvalidUrlException ex)
+            {
+                Response.StatusCode = 500;
+                return JsonConvert.SerializeObject(new ErrorDto() { Code = ex.GetType().Name, Message = ex.Message });
+            }
         }
 
         [HttpGet("go/{urlId}")]
@@ -99,7 +109,7 @@ namespace url_compress_demo.Controllers.QueryControllers
             }
             else
             {
-                return Redirect("index.html");
+                return Redirect("/");
             }
         }
     }
