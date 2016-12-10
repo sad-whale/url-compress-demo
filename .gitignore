@@ -2,6 +2,8 @@
 # Данный GITIGNORE-файл был автоматически создан Microsoft(R) Visual Studio.
 ################################################################################
 
-/url-compress-demo/src/url-compress-demo/node_modules/.bin
 /url-compress-demo/src/url-compress-demo/wwwroot/lib
-url-compress-demo/.vs/url-compress-demo/v14/.suo
+/url-compress-demo/.vs/url-compress-demo/v14/.suo
+/url-compress-demo/src/url-compress-demo/bin
+/url-compress-demo/src/url-compress-demo/obj
+/url-compress-demo/src/url-compress-demo/node_modules/
